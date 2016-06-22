@@ -31,8 +31,8 @@ void PCF8574::writeAllLow() {
   writeCallback();
 }
 
-// CONSTRUCTOR
 PCF8574::PCF8574(int address = 0x38){ // default address is with A0, A1, and A2 all floating or grounded.
+  // CONSTRUCTOR
   _WRITE_ADDRESS = address;
   _READ_ADDRESS  = address + 1;
   Wire.begin();
