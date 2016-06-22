@@ -13,8 +13,6 @@ uint8_t _WRITE_ADDRESS = 0x38;
 uint8_t pin_array[8]   = {0, 0, 0, 0, 0, 0, 0, 0}; // initial pin state
 uint8_t pin_byte       = 0x00;
 
-const byte ALL_HIGH = byte(B11111111);  // all high on the GPIOs, can't sink current.
-const byte ALL_LOW  = byte(B00000000);  // all low, sinks current on all of them.
 
 // PUBLIC
 PCF8574::PCF8574(int address = 0x38){ // default address is with A0, A1, and A2 all floating or grounded.
