@@ -17,20 +17,6 @@ const byte ALL_HIGH = byte(B11111111);  // all high on the GPIOs, can't sink cur
 const byte ALL_LOW  = byte(B00000000);  // all low, sinks current on all of them.
 
 // PUBLIC
-void PCF8574::writeAllHigh() {
-  for (uint8_t i = 0; i < 8; i++) {
-    pin_array[i] = 1;
-  }
-  writeCallback();
-}
-
-void PCF8574::writeAllLow() {
-  for (uint8_t i = 0; i < 8; i++) {
-    pin_array[i] = 0;
-  }
-  writeCallback();
-}
-
 PCF8574::PCF8574(int address = 0x38){ // default address is with A0, A1, and A2 all floating or grounded.
   // CONSTRUCTOR
   _WRITE_ADDRESS = address;
@@ -49,6 +35,16 @@ int PCF8574::write(uint8_t pin, uint8_t state) {
     return 0;
   }
 }
+
+void PCF8574::writeAll(int state) {
+  for (uint8_t i = 0; i < 8; i++) {
+    pin_array[i] = state;
+  }
+  writeCallback();
+}
+
+void PCF8574::writeAllHigh() { writeAll(HIGH); }
+void PCF8574::writeAllLow()  { writeAll(LOW); }
 
 // PRIVATE
 void PCF8574::writeCallback() {

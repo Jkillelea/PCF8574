@@ -7,11 +7,11 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-
 class PCF8574 {
   public:
     PCF8574(int address);
     int  write(uint8_t pin, uint8_t value);
+    void writeAll(int state);
     void writeAllLow();
     void writeAllHigh();
 
