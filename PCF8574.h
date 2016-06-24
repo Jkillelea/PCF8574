@@ -10,7 +10,7 @@
 class PCF8574 {
   public:
     PCF8574(int address);
-    int  write(uint8_t pin, uint8_t value);
+    void write(uint8_t pin, uint8_t state);
     void writeAll(int state);
     void writeAllLow();
     void writeAllHigh();

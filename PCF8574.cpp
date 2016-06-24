@@ -22,16 +22,9 @@ PCF8574::PCF8574(int address = 0x38){ // default address is with A0, A1, and A2 
   Wire.begin();
 }
 
-int PCF8574::write(uint8_t pin, uint8_t state) {
-  // public facing pin-state writing
-  if (pin >= 8 || state < 0 || state > 1) {
-    return 1; // do nothing - invalid pin number, state is not 0 or 1
-  }
-  else {
-    pin_array[pin] = state;
-    writeCallback();
-    return 0;
-  }
+void PCF8574::write(uint8_t pin, uint8_t state) {
+  pin_array[pin] = state;
+  writeCallback();
 }
 
 void PCF8574::writeAll(int state) {
