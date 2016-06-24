@@ -27,7 +27,7 @@ void PCF8574::write(uint8_t pin, uint8_t state) {
   writeCallback();
 }
 
-void PCF8574::writeAll(int state) {
+void PCF8574::writeAll(uint8_t state) {
   for (uint8_t i = 0; i < 8; i++) {
     pin_array[i] = state;
   }
