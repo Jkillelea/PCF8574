@@ -9,7 +9,7 @@
 
 class PCF8574 {
   public:
-    PCF8574(int address = 0x38); // default address is with A0, A1, and A2 all floating or grounded.
+    PCF8574(int address = 0x38); // default address, with A0, A1, and A2 all floating or grounded.
     void write(uint8_t pin, uint8_t state);
     void writeAll(uint8_t state);
     void writeAllLow();
