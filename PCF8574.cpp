@@ -15,7 +15,7 @@ uint8_t pin_byte       = 0x00;
 
 
 // PUBLIC
-PCF8574::PCF8574(int address){ // default address is with A0, A1, and A2 all floating or grounded.
+PCF8574::PCF8574(int address){
   // CONSTRUCTOR
   _WRITE_ADDRESS = address;
   _READ_ADDRESS  = address + 1;
