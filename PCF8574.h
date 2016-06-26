@@ -16,8 +16,8 @@ class PCF8574 {
     void writeAllHigh();
 
   private:
-    uint8_t _READ_ADDRESS;
     uint8_t _WRITE_ADDRESS;
+    uint8_t _READ_ADDRESS;
     uint8_t pin_array[8];
     uint8_t pin_byte;
 
