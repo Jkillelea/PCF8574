@@ -8,14 +8,14 @@
 #include "PCF8574.h"
 
 // PRIVATE
-uint8_t _READ_ADDRESS  = 0x39; // defaults
-uint8_t _WRITE_ADDRESS = 0x38;
+uint8_t _WRITE_ADDRESS = 0x38; // defaults
+uint8_t _READ_ADDRESS  = 0x39;
 uint8_t pin_array[8]   = {0, 0, 0, 0, 0, 0, 0, 0}; // initial pin state
 uint8_t pin_byte       = 0x00;
 
 
 // PUBLIC
-PCF8574::PCF8574(int address = 0x38){ // default address is with A0, A1, and A2 all floating or grounded.
+PCF8574::PCF8574(int address){
   // CONSTRUCTOR
   _WRITE_ADDRESS = address;
   _READ_ADDRESS  = address + 1;

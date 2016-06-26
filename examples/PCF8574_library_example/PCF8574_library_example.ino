@@ -13,7 +13,7 @@
 #include <PCF8574.h>
 
 
-PCF8574 pcf(0x38); // create new object from PCF8574.h library, with address 0x38
+PCF8574 pcf; // create new object from PCF8574.h library, with address 0x38
 
 
 void setup() {
