@@ -8,8 +8,8 @@
 #include "PCF8574.h"
 
 // PRIVATE
-uint8_t _WRITE_ADDRESS = 0x38;
-uint8_t _READ_ADDRESS  = 0x39; // defaults
+uint8_t _WRITE_ADDRESS = 0x38; // defaults
+uint8_t _READ_ADDRESS  = 0x39;
 uint8_t pin_array[8]   = {0, 0, 0, 0, 0, 0, 0, 0}; // initial pin state
 uint8_t pin_byte       = 0x00;
 
