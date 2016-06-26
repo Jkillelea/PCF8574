@@ -37,6 +37,12 @@ void PCF8574::writeAll(uint8_t state) {
 void PCF8574::writeAllHigh() { writeAll(HIGH); }
 void PCF8574::writeAllLow()  { writeAll(LOW); }
 
+
+// uint8_t PCF8574::read(uint8_t pin) {
+//   // TODO => This!
+// }
+
+
 // PRIVATE
 void PCF8574::writeCallback() {
   //writes pin states, reads things, ect
