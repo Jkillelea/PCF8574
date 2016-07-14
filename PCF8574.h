@@ -28,4 +28,4 @@ class PCF8574 {
     uint8_t arrayToByte(uint8_t array[]);
 };
 
-#endif
+#endif /* end of include guard: PCF8574_H*/
