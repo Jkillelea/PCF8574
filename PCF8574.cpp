@@ -2,9 +2,6 @@
 // controls the PCF8574 I2C GPIO expander chip from TI.
 // code under GNU GPLV3
 
-#include <Arduino.h>
-#include <Wire.h>
-
 #include "PCF8574.h"
 
 // PRIVATE
