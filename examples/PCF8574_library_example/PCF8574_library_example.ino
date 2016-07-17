@@ -7,7 +7,7 @@
  * directly attached to VCC on one end, and the PCF8574 chip on the other.
  * When the PCF8574 pins are "high," they do not allow current to pass through.
  * When the pins are "low," current flows freely to ground and the LEDs light up.
-*/
+ */
 #include <Wire.h>
 #include <PCF8574.h>
 
