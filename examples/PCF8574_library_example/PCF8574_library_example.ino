@@ -20,7 +20,7 @@ void setup() {
 }
 
 void loop() {
-  for(uint8_t i = 0; i < 8; i++) {
+  for(int i = 0; i < 8; i++) {
     pcf.write(i, LOW); // briefly toggle each LED on
     delay(50);
     pcf.write(i, HIGH);
