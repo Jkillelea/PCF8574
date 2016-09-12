@@ -12,7 +12,7 @@ uint8_t pin_byte       = 0x00;
 
 
 // PUBLIC
-PCF8574::PCF8574(int address){
+PCF8574::PCF8574(int address) {
   // CONSTRUCTOR
   _WRITE_ADDRESS = address;
   _READ_ADDRESS  = address + 1;
@@ -62,7 +62,7 @@ void PCF8574::sendInstructionToChip(byte address, byte instruction) {
 // MATH FUNCTIONS
 int PCF8574::power(int base, int p) {
   // int-only version of Arduino pow() function
-  if (p == 0){
+  if (p == 0) {
     return 1;
   }
   else {
@@ -74,7 +74,7 @@ int PCF8574::power(int base, int p) {
   }
 }
 
-uint8_t PCF8574::arrayToByte(uint8_t array[]){
+uint8_t PCF8574::arrayToByte(uint8_t array[]) {
   // Takes an array and converts it from binary to its numerical value
   uint8_t out_byte = 0;
   for (uint8_t i = 0; i < 8; i++) {
