@@ -51,7 +51,7 @@ void PCF8574::writeAll(uint8_t state) {
 }
 
 // PRIVATE
-void PCF8574::writeCallback() {
+inline void PCF8574::writeCallback() {
   sendInstructionToChip(_WRITE_ADDRESS, pin_state);
 }
 
