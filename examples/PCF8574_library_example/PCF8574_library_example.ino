@@ -8,12 +8,11 @@
  * When the PCF8574 pins are "high," they do not allow current to pass through.
  * When the pins are "low," current flows freely to ground and the LEDs light up.
  */
+
 #include <Wire.h>
 #include <PCF8574.h>
 
-
 PCF8574 pcf; // create new object from PCF8574.h library, with default address 0x38
-
 
 void setup() {
   pcf.writeAllHigh(); // turns all the LEDs off.
