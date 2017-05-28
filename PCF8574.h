@@ -11,8 +11,6 @@ public:
   void writeHigh(uint8_t pin);
   void writeLow(uint8_t pin);
   void writeAll(uint8_t state);
-  void writeAllLow();
-  void writeAllHigh();
 
 private:
   uint8_t _WRITE_ADDRESS = 0x38; // defaults

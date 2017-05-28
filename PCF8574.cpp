@@ -29,23 +29,15 @@ inline void PCF8574::writeLow(uint8_t pin) {
   writeCallback();         // All the other bits are AND'ed with 1 (so not affected)
 }
 
-inline void PCF8574::writeAllHigh() {
-  pin_state |= 0xFF;
-  writeCallback();
-}
-
-inline void PCF8574::writeAllLow() {
-  pin_state &= 0x00;
-  writeCallback();
-}
-
 void PCF8574::writeAll(uint8_t state) {
   switch (state) {
     case HIGH:
-      writeAllHigh();
+      pin_state |= 0xFF;
+      writeCallback();
       break;
     case LOW:
-      writeAllLow();
+      pin_state &= 0x00;
+      writeCallback();
       break;
   }
 }
