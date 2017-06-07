@@ -15,7 +15,7 @@
 PCF8574 pcf; // create new object from PCF8574.h library, with default address 0x38
 
 void setup() {
-  pcf.writeAllHigh(); // turns all the LEDs off.
+  pcf.writeAll(HIGH); // turns all the LEDs off.
 }
 
 void loop() {
