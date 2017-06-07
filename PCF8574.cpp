@@ -1,8 +1,8 @@
 #include "PCF8574.h"
 
 // PUBLIC
+// CONSTRUCTOR
 PCF8574::PCF8574(int address) {
-  // CONSTRUCTOR
   _WRITE_ADDRESS = address;
   _READ_ADDRESS  = address + 1;
   Wire.begin();
