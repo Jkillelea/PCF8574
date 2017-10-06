@@ -33,10 +33,10 @@ inline void PCF8574::writeLow(uint8_t pin) {
 void PCF8574::writeAll(uint8_t state) {
   switch (state) {
     case HIGH:
-      pin_state |= 0xFF;
+      pin_state = 0xFF;
       break;
     case LOW:
-      pin_state &= 0x00;
+      pin_state = 0x00;
       break;
   }
   writeCallback();
